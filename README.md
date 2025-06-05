@@ -10,9 +10,24 @@
     - Persistência de autenticação via localStorage
 
 ## Como rodar
-    1. Baixe/clique duas vezes no arquivo `index.html` (não precisa de servidor).
-    2. Crie uma conta ou faça login.
-    3. Use o feed, publique, edite seu perfil!
+
+1. **Clone o repositório:**
+
+   ```sh
+   git clone https://github.com/JA-TADS/Mini-X.git
+   ```
+
+2. **Acesse a pasta do projeto:**
+
+   ```sh
+   cd Mini-X
+   ```
+
+3. **Abra o arquivo `index.html` no navegador:**
+
+   - Clique duas vezes no arquivo `index.html`
+   **ou**
+   - Abra com o botão direito e escolha "Abrir com" > seu navegador preferido
 
 ## Estrutura da Pastas
 ```
