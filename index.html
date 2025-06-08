@@ -1,21 +1,28 @@
+<!-- Arquivo principal HTML do Mini Twitter -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Twitter</title>
+  <!-- Reset e estilos principais -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- O conteúdo da aplicação será renderizado dinamicamente dentro desta div -->
   <div id="app"></div>
+  <!-- Scripts de controllers (lógica de autenticação, postagens e perfil) -->
   <script src="js/controllers/AuthController.js"></script>
   <script src="js/controllers/PostController.js"></script>
   <script src="js/controllers/ProfileController.js"></script>
+  <!-- Script responsável por gerenciar as views (telas) -->
   <script src="js/views/ViewManager.js"></script>
+  <!-- Scripts de acesso à API (repositórios) -->
   <script src="js/repositories/AuthRepository.js"></script>
   <script src="js/repositories/PostRepository.js"></script>
   <script src="js/repositories/UserRepository.js"></script>
+  <!-- Script principal que inicia a aplicação -->
   <script src="js/main.js"></script>
 </body>
 </html> 

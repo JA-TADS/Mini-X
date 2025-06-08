@@ -1,4 +1,6 @@
+// Repositório responsável por operações de perfil de usuário via API
 const UserRepository = {
+  // Busca os dados do perfil do usuário logado
   async getProfile() {
     const token = localStorage.getItem('token');
     const res = await fetch(`${API_URL}/api/users/profile`, {
@@ -8,6 +10,7 @@ const UserRepository = {
     if (!res.ok) throw new Error(data.message || 'Erro ao carregar perfil');
     return data;
   },
+  // Atualiza os dados do perfil do usuário
   async updateProfile(username, email) {
     const token = localStorage.getItem('token');
     const res = await fetch(`${API_URL}/api/users/profile`, {

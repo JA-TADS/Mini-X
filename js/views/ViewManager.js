@@ -1,4 +1,6 @@
+// Gerencia as views/telas da aplicação SPA
 const ViewManager = {
+  // Renderiza a tela inicial (login ou feed, dependendo do token)
   renderInitialView() {
     const token = localStorage.getItem('token');
     if (token) {
@@ -7,6 +9,7 @@ const ViewManager = {
       this.renderLogin();
     }
   },
+  // Renderiza a tela de login
   renderLogin() {
     document.getElementById('app').innerHTML = `
       <div class="login-container">
@@ -20,12 +23,15 @@ const ViewManager = {
         </form>
       </div>
     `;
+    // Troca para tela de cadastro
     document.getElementById('to-register').onclick = (e) => {
       e.preventDefault();
       this.renderRegister();
     };
+    // Submete o formulário de login
     document.getElementById('login-form').onsubmit = AuthController.handleLogin;
   },
+  // Renderiza a tela de cadastro
   renderRegister() {
     document.getElementById('app').innerHTML = `
       <div class="login-container">
@@ -40,12 +46,15 @@ const ViewManager = {
         </form>
       </div>
     `;
+    // Troca para tela de login
     document.getElementById('to-login').onclick = (e) => {
       e.preventDefault();
       this.renderLogin();
     };
+    // Submete o formulário de cadastro
     document.getElementById('register-form').onsubmit = AuthController.handleRegister;
   },
+  // Renderiza o feed principal
   renderFeed() {
     const user = JSON.parse(localStorage.getItem('user'));
     const initial = user ? user.username.charAt(0).toUpperCase() : '?';
@@ -78,11 +87,16 @@ const ViewManager = {
         <div id="posts-list"></div>
       </section>
     `;
+    // Botão para ir ao perfil
     document.getElementById('to-profile').onclick = () => this.renderProfile();
+    // Botão para recarregar o feed
     document.getElementById('to-feed').onclick = () => this.renderFeed();
+    // Submete o formulário de novo post
     document.getElementById('post-form').onsubmit = PostController.handleCreatePost;
+    // Carrega os posts do feed
     PostController.loadPosts();
   },
+  // Renderiza a tela de perfil do usuário
   renderProfile() {
     const user = JSON.parse(localStorage.getItem('user'));
     const initial = user ? user.username.charAt(0).toUpperCase() : '?';
@@ -123,10 +137,15 @@ const ViewManager = {
         </section>
       </div>
     `;
+    // Botão de logout
     document.getElementById('logout').onclick = AuthController.handleLogout;
+    // Botão para voltar ao feed
     document.getElementById('to-feed').onclick = () => this.renderFeed();
+    // Botão para recarregar o perfil
     document.getElementById('to-profile').onclick = () => this.renderProfile();
+    // Submete o formulário de edição de perfil
     document.getElementById('edit-profile-form').onsubmit = ProfileController.handleEditProfile;
+    // Carrega dados do perfil e posts do usuário
     ProfileController.loadProfile();
     PostController.loadMyPosts();
   }

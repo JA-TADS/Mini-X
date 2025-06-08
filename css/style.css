@@ -1,3 +1,4 @@
+/* Reset e configurações gerais */
 html, body {
   overflow-x: hidden;
 }
@@ -8,6 +9,8 @@ body {
   background: #e6ecf0;
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 }
+
+/* Container principal da aplicação SPA */
 #app {
   width: 100vw;
   max-width: none;
@@ -20,6 +23,8 @@ body {
   overflow: hidden;
   min-height: 100vh;
 }
+
+/* Barra de navegação superior */
 nav {
   display: flex;
   justify-content: space-between;
@@ -45,11 +50,15 @@ nav button {
 nav button:hover {
   background: rgba(29,161,242,0.15);
 }
+
+/* Títulos principais */
 h2, h3 {
   color: #1da1f2;
   margin-bottom: 12px;
   font-weight: 700;
 }
+
+/* Formulários e campos de entrada */
 form {
   margin-bottom: 18px;
 }
@@ -72,6 +81,8 @@ textarea {
   min-height: 60px;
   resize: none;
 }
+
+/* Botão de submit padrão */
 button[type="submit"] {
   background: #1da1f2;
   color: #fff;
@@ -87,6 +98,8 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background: #0d8ddb;
 }
+
+/* Seção de novo post */
 #new-post-section {
   border-bottom: 1px solid #e1e8ed;
   padding: 18px 24px 12px 24px;
@@ -94,11 +107,15 @@ button[type="submit"]:hover {
   max-width: 700px;
   margin: 0 auto;
 }
+
+/* Listas de posts */
 #posts-list, #my-posts-list {
   padding: 0 24px;
   max-width: 700px;
   margin: 0 auto;
 }
+
+/* Card de cada post */
 .post {
   border-bottom: 1px solid #e1e8ed;
   padding: 18px 18px 12px 18px;
@@ -109,6 +126,8 @@ button[type="submit"]:hover {
 .post:last-child {
   border-bottom: none;
 }
+
+/* Avatar do post */
 .post-avatar {
   width: 44px;
   height: 44px;
@@ -122,11 +141,15 @@ button[type="submit"]:hover {
   font-weight: bold;
   flex-shrink: 0;
 }
+
+/* Conteúdo do post */
 .post-content {
   flex: 1;
   word-break: break-word;
   white-space: pre-line;
 }
+
+/* Cabeçalho do post (autor, data, botão) */
 .post-header {
   display: flex;
   align-items: center;
@@ -157,6 +180,8 @@ button[type="submit"]:hover {
 .post button:hover {
   background: rgba(224,36,94,0.08);
 }
+
+/* Informações do perfil */
 #profile-info {
   background: #f5f8fa;
   border-radius: 12px;
@@ -164,6 +189,8 @@ button[type="submit"]:hover {
   margin-bottom: 18px;
   border: 1px solid #e1e8ed;
 }
+
+/* Responsividade para listas e seções principais */
 @media (max-width: 700px) {
   #new-post-section, #posts-list, #my-posts-list {
     max-width: 100vw;
@@ -171,6 +198,8 @@ button[type="submit"]:hover {
     padding-right: 8px;
   }
 }
+
+/* Botão/avatar do usuário na navbar */
 .nav-avatar-btn {
   background: transparent;
   border: none;
@@ -199,6 +228,8 @@ button[type="submit"]:hover {
   box-shadow: 0 4px 16px 0 rgba(29,161,242,0.35), 0 1.5px 4px rgba(29,161,242,0.18);
   filter: brightness(1.08);
 }
+
+/* Botão de logout */
 .logout-btn {
   display: block;
   margin: 18px 0 12px auto;
@@ -216,6 +247,8 @@ button[type="submit"]:hover {
 .logout-btn:hover {
   background: #ad1743;
 }
+
+/* Container do perfil */
 .profile-container {
   max-width: 520px;
   margin: 32px auto 0 auto;
@@ -238,6 +271,8 @@ button[type="submit"]:hover {
     padding-right: 6px;
   }
 }
+
+/* Cabeçalho do perfil */
 .profile-header {
   display: flex;
   align-items: center;
@@ -248,6 +283,8 @@ button[type="submit"]:hover {
 .profile-header h2 {
   margin-bottom: 0;
 }
+
+/* Flexbox para cabeçalho do post */
 .post-header-flex {
   display: flex;
   align-items: center;
@@ -276,6 +313,8 @@ button[type="submit"]:hover {
   padding-bottom: 12px;
   padding-top: 6px;
 }
+
+/* Botão home na navbar */
 .nav-home-btn {
   display: flex;
   align-items: center;
@@ -309,6 +348,8 @@ button[type="submit"]:hover {
 .nav-home-icon svg {
   transition: transform 0.18s, filter 0.18s;
 }
+
+/* Container de login/cadastro */
 .login-container {
   max-width: 420px;
   margin: 48px auto 0 auto;
